@@ -9,16 +9,28 @@
     android:orientation="vertical">
 
    <com.google.android.material.appbar.MaterialToolbar
+       android:id="@+id/toolBarMenu"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        app:menu="@menu/menu_principal"
        app:title="Crunchy"
-       app:navigationIcon="@drawable/baseline_arrow_drop_down_circle"
+       app:navigationIcon="@drawable/baseline_arrow_drop_down_circle" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/btnEnviar"
+        android:text="Enviar"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+
+        />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav_bar"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
