@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Pesquisar"
+        android:icon="@drawable/baseline_search"
+        android:id="@+id/mPesquisar"
+        app:showAsAction="ifRoom"/>
+
+<item android:id="@+id/mCompatilhar"
+    android:icon="@drawable/baseline_share"
+    android:title="Compatilhar"
+    app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/mFavoritar"
+        android:icon="@drawable/baseline_favorite"
+        android:title="Favoritar"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/mAnexar"
+        android:icon="@drawable/baseline_attach_file"
+        android:title="Anexar"
+        app:showAsAction="ifRoom"/>
+
+</menu>

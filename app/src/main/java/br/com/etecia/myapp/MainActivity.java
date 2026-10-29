@@ -1,11 +1,16 @@
 package br.com.etecia.myapp;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -13,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnEnviar;
+    Toolbar toolBarMenu;
 
 
     @Override
@@ -27,14 +32,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        }
+        //criar um método  para acessar o menu
 
-        btnEnviar = findViewById(R.id.btnEnviar);
 
-        btnEnviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Voce clicou", Toast.LENGTH_SHORT).show();
-            }
-        });
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (R.id.mPesquisar == item.getItemId()){
+            Toast.makeText(this, "Cliquei em pesquisar", Toast.LENGTH_SHORT).show();
+        }
+         if (R.id.mFavoritar == item.getItemId()){
+             Toast.makeText(this, "Cliquei em Favoritar", Toast.LENGTH_SHORT).show();
+
+         }
+         if (R.id.mCompatilhar == item.getItemId()){
+             Toast.makeText(this, "Cliquei em compartilhar", Toast.LENGTH_SHORT).show();
+         }
+         if (R.id.mAnexar == item.getItemId()){
+             Toast.makeText(this, "Cliquei em Anexar", Toast.LENGTH_SHORT).show();
+         }
+
+        return super.onOptionsItemSelected(item);
     }
 }
