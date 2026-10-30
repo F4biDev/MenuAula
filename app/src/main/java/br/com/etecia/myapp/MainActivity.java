@@ -5,6 +5,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -16,10 +17,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolBarMenu;
+    MaterialToolbar toolBarMenu;
 
+    ImageView idImagem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +36,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        toolBarMenu = findViewById(R.id.toolBarMenu);
+        idImagem = findViewById(R.id.idImagem);
+
+        idImagem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+            toolBarMenu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(MainActivity.this, "Cliquei em voltar", Toast.LENGTH_SHORT).show();
+                }
+            });
+
         }
-        //criar um método  para acessar o menu
 
 
     @Override
